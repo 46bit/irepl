@@ -1,0 +1,8 @@
+.DS_Store
+Icon?
+*.tmproj
+._*
+.Spotlight-V100
+.Trashes
+access.log
+error.log
