@@ -1,0 +1,45 @@
+
+  .---------------------------------------------.
+  |                                             |
+  |   .-------------------------------------.   |
+  |   |                                     |   |
+  |   |                                     |   |
+  |   |       _ ____  _____ ____  _         |   |
+  |   |      (_)  _ \| ____|  _ \| |        |   |
+  |   |      | | |_) |  _| | |_) | |        |   |
+  |   |      | |  _ <| |___|  __/| |___     |   |
+  |   |      |_|_| \_\_____|_|   |_____|    |   |
+  |   |                                     |   |
+  |   |                                     |   |
+  |   | > (and 'awesome 'practical)  ;=> #t |   |
+  |   '-------------------------------------'   |
+  |                                             |
+  |    o                               ' ' '    |
+  '---------------------------------------------'
+
+
+
+HOWTO
+
+$ irepld
+
+This starts the server.
+
+
+Now configure Messages to run the included message-received.scpt when
+on the Message Received event. You can do this in preferences, under
+Alerts. Now, as long as the server is running, you'll have an iMessage
+REPL! For Scheme!
+
+The interpreter itself is jcoglan's Heist.
+https://github.com/jcoglan/heist
+Continuations are enabled by default.
+
+
+AUTHORS
+
+Michael Mokrysz had the idea and implemented the initial version, with
+Ruby as its language.
+
+David Kendal changed the language from Ruby to Scheme, allowing support
+for persistence, and making it more secure.
