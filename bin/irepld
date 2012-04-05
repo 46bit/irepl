@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
+require 'open3'
 require 'socket'
 require 'eventmachine'
 require 'timeout'
@@ -39,8 +40,12 @@ module REPLServer
               res = '***ERROR***'
             end
           end
+          Open3.popen2('/usr/local/bin/irepl-send', @who) do |i, o|
+            i.print res
+            i.close
+            o.read
+          end
           puts "#@who #@len #{res.bytesize}"
-          send_data "#{res.bytesize}\n#{res}"
         end
       end
     end
