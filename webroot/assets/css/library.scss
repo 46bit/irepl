@@ -1,0 +1,70 @@
+@mixin wrapper {
+  width: 700px;
+	margin: 0 auto;
+}
+
+@mixin hide {
+	display: none;
+}
+@mixin hide-text {
+	height: 0;
+	display: block;
+	text-indent: -9999px;
+}
+@mixin hide-soft {
+	position: absolute !important;    
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+@mixin box-shadow ($shadow) {
+	box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	-webkit-box-shadow: $shadow;
+}
+@mixin text-shadow ($shadow) {
+	text-shadow: $shadow;
+	-moz-text-shadow: $shadow;
+	-webkit-text-shadow: $shadow;
+}
+@mixin border-radius ($radius) {
+	border-radius: $radius;
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+}
+
+@mixin clear {
+	clear: both;
+}
+@mixin c-right {
+	clear: right;
+}
+@mixin c-left {
+	clear: left;
+}
+@mixin cfix {
+	zoom: 1;
+	&:before, &:after {
+		content: "\0020";
+		display: block;
+		height: 0;
+		visibility: hidden;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin uppercase {
+	text-transform: uppercase;
+}
+@mixin lowercase {
+	text-transform: lowercase;
+}
+
+@mixin left {
+	float: left;
+}
+@mixin right {
+	float: right;
+}

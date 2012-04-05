@@ -1,0 +1,4 @@
+<% article ||= @article %>
+<% @title = article.name unless @article.nil? %>
+<h2><%= article.name %></h2>
+<%= article.content %>

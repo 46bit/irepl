@@ -6,3 +6,4 @@ Icon?
 .Trashes
 access.log
 error.log
+.sass-cache/*

@@ -1,0 +1,109 @@
+@import "library.scss";
+
+html {
+	background: #fff;
+	overflow-y: scroll;
+}
+
+body {
+	color: #555;
+	font: 24px/1.7 "Lucida Grande", Helvetica, sans-serif;
+}
+
+a {
+	color: #7c009a;
+	&:link, &:visited {
+		text-decoration: none;
+	}
+	&:hover, &:active {
+		text-decoration: underline;
+	}
+}
+
+#page {
+  @include wrapper;
+}
+
+#header {
+  margin: 80px 0 25px 0;
+  #logo {
+    a {
+      width: 285px;
+      height: 72px;
+      display: block;
+      background: url(../img/logo.png) no-repeat 0 0;
+      span {
+        @include hide-text;
+      }
+    }
+  }
+}
+
+#main {
+  h2 {
+    color: #222;
+  }
+  p {
+    strong {
+      color: #222;
+      font-weight: normal;
+    }
+  }
+}
+
+#footer {
+  margin: 15px 0;
+  p {
+    color: #777;
+    font-size: 16px;
+    &.minor {
+      font-size: 15px;
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  #page {
+    width: 728px !important;
+    margin-left: 20px;
+  }
+  #header {
+    margin-top: 20px;
+  }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  #page {
+    width: 440px !important;
+    margin-left: 20px;
+  }
+  #header {
+    margin-top: 20px;
+  }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  #page {
+    width: 300px !important;
+    margin-left: 10px;
+  }
+  #header {
+    margin-top: 20px;
+    #logo a {
+      margin: 0 auto;
+    }
+  }
+  p {
+    text-align: justify;
+  }
+}

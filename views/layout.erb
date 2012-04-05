@@ -1,0 +1,31 @@
+<!DOCTYPE html>  
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]>	<html lang="en" class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]>	<html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]>	<html lang="en" class="no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="alternate" type="application/atom+xml" href="/meta/feed.atom" />
+	<link rel="stylesheet" href="/assets/css/master.css?build=<%= digest "webroot/assets/css/master.css" %>" />
+	<title><%= @title || "iMessage Hacking" %> - iREPL</title>
+</head>
+<body>
+	<div id="page">
+	  <header id="header">
+	    <h1 id="logo"><a href="/"><span>iREPL</span></a></h1>
+	  </header>
+	  <div id="main">
+	    <%= yield %>
+	  </div>
+	  <footer id="footer">
+	    <p>Open sourced on <a href="https://github.com/46Bit/irepl">Github</a>, built using <a href="https://github.com/jcoglan/heist">Heist</a></p>
+      <p class="minor">By <a href="http://davidkendal.net">David Kendal</a> &amp; <a href="https://46bit.com">Michael Mokrysz</a></p>
+	  </footer>
+	</div>
+</body>
+</html>

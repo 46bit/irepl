@@ -1,4 +1,3 @@
 source :rubygems
 
-gem 'heist'
-gem 'eventmachine'
+gem "fairytale", "~> 0.7.9.3"
