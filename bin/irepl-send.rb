@@ -1,3 +1,4 @@
+# `say "send"`
 
 framework 'ScriptingBridge'
 

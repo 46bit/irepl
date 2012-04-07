@@ -1,0 +1,19 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    eventmachine (0.12.10)
+    heist (0.3.3)
+      oyster (>= 0.9)
+      treetop (>= 1.2)
+    oyster (0.9.5)
+    polyglot (0.3.3)
+    treetop (1.4.10)
+      polyglot
+      polyglot (>= 0.3.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  eventmachine
+  heist

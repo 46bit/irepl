@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+# `say "irepl-recv"`
+
 require 'socket'
 
 who = ARGV[0]
