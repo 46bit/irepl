@@ -33,7 +33,7 @@ module REPLServer
           res = '**unknown**'
           Timeout::timeout(15) do
             begin
-              res = IREPL_INST.eval_for @who, @exp[0...@len]
+              res = IREPL_INST.eval_for @who, @exp[0...@len].gsub(/[[:space:]]/, ' ') # fix for a bug in messages beta
             rescue Timeout::Error
               res = '***TIMEOUT***'
             rescue Exception
