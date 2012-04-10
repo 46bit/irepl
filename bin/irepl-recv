@@ -1,12 +1,12 @@
 #!/usr/bin/env ruby
 
 # `say "irepl-recv"`
+# `say "#{RUBY_VERSION}"`
 
 require 'socket'
 
 who = ARGV[0]
 exp = STDIN.read
-
 sock = UNIXSocket.new '/tmp/irepl.sock'
 
 sock.puts who

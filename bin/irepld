@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+# encoding: utf-8
+
 require 'open3'
 require 'socket'
 require 'eventmachine'
@@ -33,7 +35,7 @@ module REPLServer
           res = '**unknown**'
           Timeout::timeout(15) do
             begin
-              res = IREPL_INST.eval_for @who, @exp[0...@len].gsub(/[[:space:]]/, ' ') # fix for a bug in messages beta
+              res = IREPL_INST.eval_for @who, @exp.force_encoding("UTF-8").gsub("\u00A0", " ")
             rescue Timeout::Error
               res = '***TIMEOUT***'
             rescue Exception
