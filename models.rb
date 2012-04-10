@@ -22,7 +22,7 @@ class Article
   
   def parse_markdown
     rendered = md(@path).lines.to_a
-    @name = rendered.shift.gsub(/<\/?h1>/, "").sub("\n", "")
+    @name = rendered.shift.gsub(/<\/?h[0-6]>/, "").sub("\n", "")
     @content = rendered.join "\n"
   end
 end

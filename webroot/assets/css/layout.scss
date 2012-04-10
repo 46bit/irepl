@@ -7,7 +7,7 @@ html {
 
 body {
 	color: #555;
-	font: 24px/1.7 "Lucida Grande", Helvetica, sans-serif;
+	font: 18px/1.7 "Lucida Grande", Helvetica, sans-serif;
 }
 
 a {
@@ -25,12 +25,13 @@ a {
 }
 
 #header {
-  margin: 80px 0 25px 0;
+  margin: 80px 0 30px 0;
   #logo {
     a {
       width: 285px;
       height: 72px;
       display: block;
+      font-size: 24px;
       background: url(../img/logo.png) no-repeat 0 0;
       span {
         @include hide-text;
@@ -42,17 +43,22 @@ a {
 #main {
   h2 {
     color: #222;
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  strong {
+    color: #222;
+    font-weight: normal;
   }
   p {
-    strong {
-      color: #222;
-      font-weight: normal;
-    }
+    font-size: 18px;
   }
 }
 
 #footer {
-  margin: 15px 0;
+  margin: 25px 0;
   p {
     color: #777;
     font-size: 16px;
@@ -73,10 +79,6 @@ a {
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   #page {
     width: 728px !important;
-    margin-left: 20px;
-  }
-  #header {
-    margin-top: 20px;
   }
 }
 
