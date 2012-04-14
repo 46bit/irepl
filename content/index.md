@@ -4,4 +4,4 @@
 
 Then learn Scheme through [reading SICP &rarr;](http://mitpress.mit.edu/sicp/full-text/book/book-Z-H-5.html)
 
-<p style="font-size: 14px; margin-top: 15px; color: #666;">(iMessage is Apple's proprietary text messaging service. We don't have this running for email yet.)</p>
+<p style="font-size: 14px; margin-top: 15px; color: #666;">(iMessage is Apple's awesome text messaging service. This isn't running for email yet.)</p>
