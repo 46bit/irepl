@@ -33,15 +33,23 @@ module REPLServer
       if @exp.bytesize >= @len
         Thread.new do
           res = '**unknown**'
-          Timeout::timeout(15) do
-            begin
-              res = IREPL_INST.eval_for @who, @exp.force_encoding("UTF-8").gsub("\u00A0", " ")
-            rescue Timeout::Error
-              res = '***TIMEOUT***'
-            rescue Exception
-              res = '***ERROR***'
+          
+          if @exp == "?" || @exp == "help"
+            res = "Welcome to iREPL\n"
+            res += "Enter Scheme code to use it, for instance (+ 5 4).\n"
+            res += "For more on Scheme see https://www.google.com/search?q=scheme%20tutorial"
+          else
+            Timeout::timeout(15) do
+              begin
+                res = IREPL_INST.eval_for @who, @exp.force_encoding("UTF-8").gsub("\u00A0", " ")
+              rescue Timeout::Error
+                res = '***TIMEOUT***'
+              rescue Exception
+                res = '***ERROR***'
+              end
             end
           end
+          
           Open3.popen2('/usr/local/bin/irepl-send', @who) do |i, o|
             i.print res
             i.close
