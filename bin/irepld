@@ -34,10 +34,9 @@ module REPLServer
         Thread.new do
           exp_raw = @exp.gsub(/\n|\r/, "")
           if exp_raw == "?" || exp_raw == "help"
-            send_imessage "Welcome to iREPL\n"
-            send_imessage "Enter Scheme code to use it, for instance (+ 5 4).\n"
-            send_imessage "For more on Scheme see https://www.google.com/search?q=scheme%20tutorial"
-            send_imessage "For more on iREPL see http://irepl.im"
+            send_imessage "Welcome to iREPL, a Scheme REPL for iMessage."
+            send_imessage "Enter Scheme expressions to use it, for instance (+ 5 4). For more on Scheme see https://www.google.com/search?q=scheme%20tutorial."
+            send_imessage "iREPL was created by David Kendal & Michael Mokrysz. See http://irepl.im for more information."
           else
             res = '**unknown**'
             Timeout::timeout(15) do
