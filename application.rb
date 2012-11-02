@@ -6,9 +6,9 @@ require './helpers'
 require './models'
 
 # Assets
-get('/assets/css/master.css', nil) {
-  scss :master, engine_options: { :style => :compressed }
-}
+get '/assets/css/master.css', nil do
+  scss :master, :style => :compressed
+end
 
 # Home
 get '/' do
